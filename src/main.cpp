@@ -1,6 +1,4 @@
-
-
-
+#include <iostream>
 
 struct Hawk {
     int CrewCapasity = 2;
@@ -13,15 +11,7 @@ struct Hawk {
 
 };
 
-
-
-
-
-
-
-
-
-
 int main() {
+	std::cout << "Starting programme... Initialising plane " << std::endl;
     return 0;
 }
