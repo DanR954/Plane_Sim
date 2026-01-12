@@ -1,0 +1,13 @@
+# Visual Studio temporary files
+.vs/
+out/
+build/
+x64/
+Debug/
+Release/
+
+# CMake artifacts
+CMakeCache.txt
+CMakeFiles/
+CMakeSettings.json
+cmake_install.cmake
