@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(include)
 
-add_executable(Plane_Sim src/main.cpp)
+add_executable(Plane_Sim src/main.cpp "src/engine.cpp" "src/fuel_tank.cpp")
