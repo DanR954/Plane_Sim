@@ -4,7 +4,10 @@
 
 namespace maths {
 	constexpr double pi = 3.14159265358979323846;
+	constexpr double e = 2.71828182845904523536;
 
+
+	// 3D Vector structure
 	struct Vector3 {
 		// Initial data
 		double x, y, z;
@@ -22,5 +25,17 @@ namespace maths {
 		double magnitude() {
 			return std::sqrt((x * x) + (y * y) + (z * z));
 		};
+
+
 	};
+
+	double degreesToRadians(double degrees) {
+		return degrees * (pi / 180.0);
+	}
+
+	double radiansToDegrees(double radians) {
+		return radians * (180.0 / pi);
+	}
+
+
 }
