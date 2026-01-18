@@ -7,7 +7,7 @@
 #include <cstddef>
 
 int main() {
-	std::cout << "Starting programme... Initialising plane " << std::endl;
+	std::cout << "Starting programme... Initialising plane " << "\n";
 	std::cout << "Starting location coordinates: (0,0,0)" << "\n";
 
 	specs::Plane <specs::Hawk> hawkPlane;

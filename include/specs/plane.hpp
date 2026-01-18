@@ -4,6 +4,7 @@
 #include <universal/maths.hpp>
 #include <components/fuel_tank.hpp>
 
+// Look at using bit masks for some properties to save memory. For example, landing gear status, engine status, etc.
 
 
 namespace specs {
@@ -11,6 +12,7 @@ namespace specs {
 class Plane
 	{
 	private:
+		// Physical properties
 		maths::Vector3 position;
 		maths::Vector3 velocity;
 		maths::Vector3 acceleration;
