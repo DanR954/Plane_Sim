@@ -14,11 +14,11 @@ class Plane
 		maths::Vector3 position;
 		maths::Vector3 velocity;
 		maths::Vector3 acceleration;
-		double mass;
+		float mass;
 		components::FuelTank fuelTank;
 
 	public:
-		Plane() : position(0.0, 0.0, 0.0), velocity(0.0, 0.0, 0.0), acceleration(0.0, 0.0, 0.0), mass(T::EmptyWeight + T::UsefulLoad), fuelTank(500.0, 500.0) {}
+		Plane() : position(0.0f, 0.0f, 0.0f), velocity(0.0, 0.0, 0.0), acceleration(0.0, 0.0, 0.0), mass(T::EmptyWeight + T::UsefulLoad), fuelTank(500.0, 500.0) {}
 		auto getPosition() const { return (position); }
 
 	};

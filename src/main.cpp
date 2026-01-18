@@ -4,7 +4,7 @@
 #include <components/engine.hpp>
 #include <universal/maths.hpp>
 #include <specs/plane.hpp>
-
+#include <cstddef>
 
 int main() {
 	std::cout << "Starting programme... Initialising plane " << std::endl;

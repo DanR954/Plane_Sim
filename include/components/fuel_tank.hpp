@@ -4,15 +4,15 @@
 namespace components {
 	class FuelTank {
 	private:
-		double capacity;
-		double currentLevel;
+		float capacity;
+		float currentLevel;
 	public:
-		FuelTank(double capacity, double currentLevel);
+		FuelTank(float capacity, float currentLevel);
 		virtual ~FuelTank();
-		double getCapacity() const;
-		double getCurrentLevel() const;
-		void addFuel(double amount);
-		void consumeFuel(double amount);
+		float getCapacity() const;
+		float getCurrentLevel() const;
+		void addFuel(float amount);
+		void consumeFuel(float amount);
 	};
 }
 

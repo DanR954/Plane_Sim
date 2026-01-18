@@ -1,7 +1,7 @@
 #include "components/fuel_tank.hpp"
 
 namespace components {
-	FuelTank::FuelTank(double capacity, double currentLevel)
+	FuelTank::FuelTank(float capacity, float currentLevel)
 	{
 		this->capacity = capacity;
 		this->currentLevel = currentLevel;
@@ -10,19 +10,19 @@ namespace components {
 	FuelTank::~FuelTank()
 	{
 	};
-	double FuelTank::getCapacity() const
+	float FuelTank::getCapacity() const
 	{
 		return this->capacity;
 	};
-	double FuelTank::getCurrentLevel() const
+	float FuelTank::getCurrentLevel() const
 	{
 		return this->currentLevel;
 	};
 
-	void FuelTank::addFuel(double amount) {
+	void FuelTank::addFuel(float amount) {
 		this->currentLevel += amount;
 	};
-	void FuelTank::consumeFuel(double amount)
+	void FuelTank::consumeFuel(float amount)
 	{
 		this->currentLevel -= amount;
 	};
