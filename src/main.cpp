@@ -14,6 +14,10 @@ int main() {
 	auto currentposition = hawkPlane.getPosition();
 	std::cout << "Current Position: (" << currentposition.x << ", " << currentposition.y << ", " << currentposition.z << ")\n";
 
+	hawkPlane.setPosition(maths::Vector3(0.0f, 0.0f, 10.0f));
+
+	currentposition = hawkPlane.getPosition();
+	std::cout << "Updated position of the hawk plane: (" << currentposition.x << ", " << currentposition.y << ", " << currentposition.z << ")\n";
 
     return 0;
 }

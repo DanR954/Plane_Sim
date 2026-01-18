@@ -21,6 +21,7 @@ class Plane
 		Plane() : position(0.0f, 0.0f, 0.0f), velocity(0.0, 0.0, 0.0), acceleration(0.0, 0.0, 0.0), mass(T::EmptyWeight + T::UsefulLoad), fuelTank(500.0, 500.0) {}
 		auto getPosition() const { return (position); }
 
+		auto setPosition(const maths::Vector3& newPosition) { position = newPosition; };
 	};
 }
 
