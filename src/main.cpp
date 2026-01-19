@@ -14,26 +14,37 @@ int main() {
 	auto currentposition = hawkPlane.getPosition();
 	std::cout << "Current Position: (" << currentposition.x << ", " << currentposition.y << ", " << currentposition.z << ")\n";
 
-	hawkPlane.setPosition(maths::Vector3(0.0f, 0.0f, 10.0f));
-
-	currentposition = hawkPlane.getPosition();
-	std::cout << "Updated position of the hawk plane: (" << currentposition.x << ", " << currentposition.y << ", " << currentposition.z << ")\n";
-
 	float speed = 50.0f; // Speed in m/s
+	float gravity = physics::gravity; // Gravity in m/s^2
+
 	float deltaTime = 0.016f; // Time step in seconds (around 60 Hz)
 
-	auto movement = speed * deltaTime;
+	auto movement_z = speed * deltaTime;
 
+	for (int i = 0; i < 100; i++) {
 
-	for (int i = 0; i < 10; i++) {
-		auto current_position = hawkPlane.getPosition();
+		auto position = hawkPlane.getPosition();
 		 
-		// Next overload the += operator in Vector3 to make this cleaner. 
-		auto new_position = current_position + maths::Vector3(0.0f, 0.0f, movement);
+		// Overloaded the += operator in Vector3 to make this cleaner. 
+		//position += maths::Vector3(0.0f, 0.0f, movement);
+		auto velocity = hawkPlane.getVelocity();
+		auto acceleration = hawkPlane.getAcceleration();
 
-		hawkPlane.setPosition(new_position);
+		acceleration.z = gravity; // Apply gravity in the negative z direction
 
-		std::cout << "New Position: (" << new_position.x << ", " << new_position.y << ", " << new_position.z << ")\n";
+		velocity.z = movement_z;
+
+		acceleration = acceleration * deltaTime;
+		velocity += acceleration * deltaTime;
+
+		position += velocity;
+
+		hawkPlane.setPosition(position);
+		position = hawkPlane.getPosition();
+
+		std::cout << "New Position: (" << position.x << ", " << position.y << ", " << position.z << ")\n";
+
+
 	}
     return 0;
 }
