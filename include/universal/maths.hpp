@@ -24,7 +24,7 @@ namespace maths {
 			return (x * other.x) + (y * other.y) + (z * other.z);
 		}
 
-		// Addition operator overload
+		// Addition operator overload. v1 + v2, returns a new Vector3
 		Vector3 operator+(const Vector3& other) const { return Vector3(x + other.x, y + other.y, z + other.z); }
 
 
