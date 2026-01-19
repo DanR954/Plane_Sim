@@ -34,7 +34,6 @@ int main() {
 
 		velocity.z = movement_z;
 
-		acceleration = acceleration * deltaTime;
 		velocity += acceleration * deltaTime;
 
 		position += velocity;
