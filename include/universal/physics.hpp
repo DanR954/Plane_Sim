@@ -1,3 +1,5 @@
+#include <universal/maths.hpp>
+
 namespace physics {
-	constexpr float gravity = -9.80665; // m/s^2
+	constexpr float gravity = -9.80665f; // m/s^2
 }

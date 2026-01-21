@@ -33,6 +33,13 @@ namespace maths {
 			z += other.z;
 			return *this;
 		};
+
+		Vector3& operator*(const float scalar) {
+			x *= scalar;
+			y *= scalar;
+			z *= scalar;
+			return *this;
+		}
 		// Magnitude method
 		float magnitude() {
 			return std::sqrt((x * x) + (y * y) + (z * z));

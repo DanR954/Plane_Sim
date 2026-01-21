@@ -30,9 +30,9 @@ int main() {
 		auto velocity = hawkPlane.getVelocity();
 		auto acceleration = hawkPlane.getAcceleration();
 
-		acceleration.z = gravity; // Apply gravity in the negative z direction
+		acceleration.z = -gravity; // Apply gravity in the negative z direction
 
-		velocity.z = movement_z;
+		velocity.z += movement_z;
 
 		velocity += acceleration * deltaTime;
 
