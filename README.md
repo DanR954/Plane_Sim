@@ -10,5 +10,3 @@ I will be following a few guidelines to make sure the programme is secure:
 - Follow RAII (Resource Acquisition Is Initialization) principles
 - Ensure Inheretance is use efficiently as to not create a diamond problem
 - Prefer Composition over inheretance
-- Create Unit tests for each method
-- Create UML Diagrams for the architecture
